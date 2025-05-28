@@ -39,7 +39,7 @@ const languages: Language[] = [
     level: 85,
     logo: "https://upload.wikimedia.org/wikipedia/vec/0/05/Java_Logo.svg.png?20101217132408?height=32&width=32&text=JV",
     color: "#ED8B00",
-    gradient: "from-orange-400 to-red-500",
+    gradient: "from-cyan-400 to-cyan-600",
   },
   {
     name: "C++",
@@ -53,7 +53,7 @@ const languages: Language[] = [
     level: 75,
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Solidity_logo.svg/579px-Solidity_logo.svg.png?height=32&width=32&text=SOL",
     color: "#CE422B",
-    gradient: "from-orange-600 to-red-600",
+    gradient: "from-cyan-600 to-cyan-800",
   },
 ]
 
@@ -68,8 +68,8 @@ const getProficiencyLevel = (level: number): { label: string; color: string; bgC
   } else if (level >= 80) {
     return {
       label: "Intermediate",
-      color: "text-blue-600 dark:text-blue-400",
-      bgColor: "bg-blue-100 dark:bg-blue-900/30 border-blue-200 dark:border-blue-800",
+      color: "text-cyan-600 dark:text-cyan-400",
+      bgColor: "bg-cyan-100 dark:bg-cyan-900/30 border-cyan-200 dark:border-cyan-800",
     }
   } else {
     return {
@@ -115,7 +115,7 @@ function LanguageCard({ language, index, isVisible }: LanguageCardProps) {
 
   return (
     <Card
-      className={`group relative overflow-hidden bg-gradient-to-br from-background to-background/50 border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 hover:scale-[1.02] ${
+      className={`group relative overflow-hidden bg-gradient-to-br from-background to-background/50 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:scale-[1.02] ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
       style={{
@@ -134,7 +134,7 @@ function LanguageCard({ language, index, isVisible }: LanguageCardProps) {
         <div className="flex items-center gap-4 mb-4">
           {/* Language Logo */}
           <div className="relative">
-            <div className="w-12 h-12 bg-gradient-to-br from-background to-background/50 rounded-xl p-2 border border-orange-500/20 group-hover:border-orange-500/40 transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-background to-background/50 rounded-xl p-2 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
               {!imageError ? (
                 <>
                   <img
@@ -149,7 +149,7 @@ function LanguageCard({ language, index, isVisible }: LanguageCardProps) {
                   />
                   {!imageLoaded && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-4 h-4 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin"></div>
+                      <div className="w-4 h-4 border-2 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin"></div>
                     </div>
                   )}
                 </>
@@ -176,7 +176,7 @@ function LanguageCard({ language, index, isVisible }: LanguageCardProps) {
 
           {/* Language Info */}
           <div className="flex-1">
-            <h3 className="text-lg font-bold mb-2 group-hover:text-orange-500 transition-colors duration-300">
+            <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-500 transition-colors duration-300">
               {language.name}
             </h3>
             {/* Proficiency Level Badge */}
@@ -185,7 +185,7 @@ function LanguageCard({ language, index, isVisible }: LanguageCardProps) {
             >
               <div
                 className={`w-2 h-2 rounded-full mr-2 ${
-                  language.level >= 90 ? "bg-green-500" : language.level >= 80 ? "bg-blue-500" : "bg-orange-500"
+                  language.level >= 90 ? "bg-green-500" : language.level >= 80 ? "bg-cyan-500" : "bg-orange-500"
                 }`}
               ></div>
               {proficiency.label}
@@ -194,7 +194,7 @@ function LanguageCard({ language, index, isVisible }: LanguageCardProps) {
 
           {/* Percentage */}
           <div className="text-right">
-            <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent">
               {Math.round(progress)}%
             </div>
             <div className="text-xs text-muted-foreground mt-1">
@@ -257,7 +257,7 @@ export function LanguageProficiency() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent">
             Language Proficiency
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -270,9 +270,9 @@ export function LanguageProficiency() {
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               <span className="text-sm font-medium text-green-600 dark:text-green-400">Advanced (90%+)</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-full">
-              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-              <span className="text-sm font-medium text-blue-600 dark:text-blue-400">Intermediate (80-89%)</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-cyan-100 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-800 rounded-full">
+              <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+              <span className="text-sm font-medium text-cyan-600 dark:text-cyan-400">Intermediate (80-89%)</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-800 rounded-full">
               <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
@@ -300,11 +300,11 @@ export function LanguageProficiency() {
             </div>
             <div className="text-sm text-green-600 dark:text-green-400">Advanced</div>
           </div>
-          <div className="text-center p-4 bg-blue-100 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+          <div className="text-center p-4 bg-cyan-100 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-800 rounded-lg">
+            <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">
               {groupedLanguages.intermediate.length}
             </div>
-            <div className="text-sm text-blue-600 dark:text-blue-400">Intermediate</div>
+            <div className="text-sm text-cyan-600 dark:text-cyan-400">Intermediate</div>
           </div>
           <div className="text-center p-4 bg-orange-100 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-800 rounded-lg">
             <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">

@@ -230,18 +230,18 @@ export default function ContactPage() {
   return (
     <div className="pt-16 min-h-screen relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-orange-600/5" />
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-orange-400/10 to-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-      <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-br from-orange-300/8 to-orange-500/8 rounded-full blur-2xl animate-pulse delay-500" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-cyan-600/5" />
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-cyan-400/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-br from-cyan-300/8 to-cyan-500/8 rounded-full blur-2xl animate-pulse delay-500" />
 
       <div className="container mx-auto px-4 py-12 relative z-10">
         {/* Enhanced Header */}
         <div className="text-center mb-20">
-          <div className="inline-block p-4 bg-gradient-to-r from-orange-500/10 to-orange-600/10 rounded-full mb-6">
-            <MessageCircle className="h-12 w-12 text-orange-500" />
+          <div className="inline-block p-4 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 rounded-full mb-6">
+            <MessageCircle className="h-12 w-12 text-cyan-500" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-600 bg-clip-text text-transparent">
             Let's Connect
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -255,45 +255,45 @@ export default function ContactPage() {
           <div className="lg:col-span-2 space-y-8">
             {/* Quick Contact Cards */}
             <div className="grid gap-6">
-              <Card className="group bg-gradient-to-br from-background via-background to-orange-500/5 border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10">
+              <Card className="group bg-gradient-to-br from-background via-background to-cyan-500/5 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Mail className="h-7 w-7 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold text-lg mb-1">Email</p>
-                      <p className="text-orange-500 font-medium">abhishekiitkgp007@gmail.com</p>
+                      <p className="text-cyan-500 font-medium">abhishekiitkgp007@gmail.com</p>
                       <p className="text-sm text-muted-foreground">Response within 24 hours</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="group bg-gradient-to-br from-background via-background to-orange-500/5 border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10">
+              <Card className="group bg-gradient-to-br from-background via-background to-cyan-500/5 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Phone className="h-7 w-7 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold text-lg mb-1">Phone</p>
-                      <p className="text-orange-500 font-medium">+91 88408-68076</p>
+                      <p className="text-cyan-500 font-medium">+91 88408-68076</p>
                       <p className="text-sm text-muted-foreground">Available Mon-Fri, 9AM-6PM IST</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="group bg-gradient-to-br from-background via-background to-orange-500/5 border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10">
+              <Card className="group bg-gradient-to-br from-background via-background to-cyan-500/5 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <MapPin className="h-7 w-7 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold text-lg mb-1">Location</p>
-                      <p className="text-orange-500 font-medium">Kanpur, Uttar Pradesh, India</p>
+                      <p className="text-cyan-500 font-medium">Kanpur, Uttar Pradesh, India</p>
                       <p className="text-sm text-muted-foreground">Open to remote collaboration</p>
                     </div>
                   </div>
@@ -302,15 +302,15 @@ export default function ContactPage() {
             </div>
 
             {/* Social Links - Enhanced */}
-            <Card className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 border-orange-500/30">
+            <Card className="bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 border-cyan-500/30">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-orange-500">Connect With Me</h3>
+                <h3 className="text-xl font-bold mb-4 text-cyan-500">Connect With Me</h3>
                 <div className="flex gap-4">
                   <Button
                     asChild
                     variant="outline"
                     size="icon"
-                    className="border-orange-500/50 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300 hover:scale-110"
+                    className="border-cyan-500/50 hover:bg-cyan-500 hover:text-white hover:border-cyan-500 transition-all duration-300 hover:scale-110"
                   >
                     <a href="https://github.com/abhishek007-git" target="_blank" rel="noopener noreferrer">
                       <Github className="h-5 w-5" />
@@ -320,9 +320,13 @@ export default function ContactPage() {
                     asChild
                     variant="outline"
                     size="icon"
-                    className="border-orange-500/50 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300 hover:scale-110"
+                    className="border-cyan-500/50 hover:bg-cyan-500 hover:text-white hover:border-cyan-500 transition-all duration-300 hover:scale-110"
                   >
-                    <a href="https://www.linkedin.com/in/abhishek-kumar-97a99631b/" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://www.linkedin.com/in/abhishek-kumar-97a99631b/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
@@ -330,7 +334,7 @@ export default function ContactPage() {
                     asChild
                     variant="outline"
                     size="icon"
-                    className="border-orange-500/50 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300 hover:scale-110"
+                    className="border-cyan-500/50 hover:bg-cyan-500 hover:text-white hover:border-cyan-500 transition-all duration-300 hover:scale-110"
                   >
                     <a href="https://x.com/Abhishe07793339" target="_blank" rel="noopener noreferrer">
                       <Twitter className="h-5 w-5" />
@@ -363,10 +367,10 @@ export default function ContactPage() {
 
           {/* Contact Form - Enhanced */}
           <div className="lg:col-span-3">
-            <Card className="bg-gradient-to-br from-background via-background/95 to-orange-500/5 border-orange-500/20 shadow-2xl">
+            <Card className="bg-gradient-to-br from-background via-background/95 to-cyan-500/5 border-cyan-500/20 shadow-2xl">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                  <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent">
                     Start a Conversation
                   </h2>
                   <p className="text-muted-foreground">
@@ -406,7 +410,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="John Doe"
                         required
-                        className={`border-orange-500/20 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-300 hover:border-orange-500/40 ${
+                        className={`border-cyan-500/20 focus:border-cyan-500 focus:ring-cyan-500/20 transition-all duration-300 hover:border-cyan-500/40 ${
                           errors.name ? "border-red-500 focus:border-red-500" : ""
                         }`}
                         disabled={submissionState.isSubmitting}
@@ -430,7 +434,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="john@example.com"
                         required
-                        className={`border-orange-500/20 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-300 hover:border-orange-500/40 ${
+                        className={`border-cyan-500/20 focus:border-cyan-500 focus:ring-cyan-500/20 transition-all duration-300 hover:border-cyan-500/40 ${
                           errors.email ? "border-red-500 focus:border-red-500" : ""
                         }`}
                         disabled={submissionState.isSubmitting}
@@ -455,7 +459,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       placeholder="Web Development Project / Consultation / Collaboration"
                       required
-                      className={`border-orange-500/20 focus:border-orange-500 focus:ring-orange-500/20 transition-all duration-300 hover:border-orange-500/40 ${
+                      className={`border-cyan-500/20 focus:border-cyan-500 focus:ring-cyan-500/20 transition-all duration-300 hover:border-cyan-500/40 ${
                         errors.subject ? "border-red-500 focus:border-red-500" : ""
                       }`}
                       disabled={submissionState.isSubmitting}
@@ -480,7 +484,7 @@ export default function ContactPage() {
                       placeholder="Tell me about your project goals, timeline, budget, and any specific requirements..."
                       rows={6}
                       required
-                      className={`border-orange-500/20 focus:border-orange-500 focus:ring-orange-500/20 resize-none transition-all duration-300 hover:border-orange-500/40 ${
+                      className={`border-cyan-500/20 focus:border-cyan-500 focus:ring-cyan-500/20 resize-none transition-all duration-300 hover:border-cyan-500/40 ${
                         errors.message ? "border-red-500 focus:border-red-500" : ""
                       }`}
                       disabled={submissionState.isSubmitting}
@@ -501,7 +505,7 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     disabled={submissionState.isSubmitting}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     {submissionState.isSubmitting ? (
                       <div className="flex items-center gap-2">
@@ -527,12 +531,12 @@ export default function ContactPage() {
 
         {/* Call to Action Section */}
         <div className="text-center mt-20">
-          <Card className="max-w-4xl mx-auto bg-gradient-to-br from-orange-500/10 via-orange-400/5 to-orange-600/10 border-orange-500/30 shadow-2xl">
+          <Card className="max-w-4xl mx-auto bg-gradient-to-br from-cyan-500/10 via-cyan-400/5 to-cyan-600/10 border-cyan-500/30 shadow-2xl">
             <CardContent className="p-12">
               <div className="mb-6">
-                <Calendar className="h-16 w-16 text-orange-500 mx-auto mb-4" />
+                <Calendar className="h-16 w-16 text-cyan-500 mx-auto mb-4" />
               </div>
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent">
                 Ready to Start Your Project?
               </h3>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -540,13 +544,13 @@ export default function ContactPage() {
                 process and bring your vision to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-3 transition-all duration-300 hover:scale-105">
+                <Button className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold px-8 py-3 transition-all duration-300 hover:scale-105">
                   Schedule a Free Consultation
                 </Button>
                 <Button
                   asChild
                   variant="outline"
-                  className="border-orange-500/50 text-orange-500 hover:bg-orange-500/10 font-semibold px-8 py-3 transition-all duration-300 hover:scale-105"
+                  className="border-cyan-500/50 text-cyan-500 hover:bg-cyan-500/10 font-semibold px-8 py-3 transition-all duration-300 hover:scale-105"
                 >
                   <a href="/projects">View My Work</a>
                 </Button>

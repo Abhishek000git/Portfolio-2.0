@@ -43,7 +43,7 @@ export function Particles() {
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
           opacity: Math.random() * 0.8 + 0.3, // Increased from 0.5 + 0.1 to 0.8 + 0.3
-          color: `rgba(249, 115, 22, ${Math.random() * 0.7 + 0.4})`, // Increased from 0.3 + 0.1 to 0.7 + 0.4
+          color: `rgba(34, 211, 238, ${Math.random() * 0.7 + 0.4})`, // Changed to cyan color
         })
       }
       return particles
@@ -70,7 +70,7 @@ export function Particles() {
             const opacity = ((100 - distance) / 100) * 0.3 // Increased from 0.1 to 0.3
             ctx.save()
             ctx.globalAlpha = opacity
-            ctx.strokeStyle = "rgba(249, 115, 22, 0.5)" // Increased from 0.2 to 0.5
+            ctx.strokeStyle = "rgba(34, 211, 238, 0.5)" // Changed to cyan color
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)

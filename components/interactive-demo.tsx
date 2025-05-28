@@ -127,8 +127,8 @@ export function InteractiveDemo() {
   return (
     <section ref={ref} className="py-20 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-orange-600/5" />
-      <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-cyan-600/5" />
+      <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 rounded-full blur-3xl animate-pulse" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -137,10 +137,10 @@ export function InteractiveDemo() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="inline-block p-4 bg-gradient-to-r from-orange-500/10 to-orange-600/10 rounded-full mb-6">
-            <Code className="h-12 w-12 text-orange-500" />
+          <div className="inline-block p-4 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 rounded-full mb-6">
+            <Code className="h-12 w-12 text-cyan-500" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-600 bg-clip-text text-transparent">
             Live Code Playground
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -156,10 +156,10 @@ export function InteractiveDemo() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <Card className="bg-gradient-to-br from-background to-background/50 border-orange-500/20 sticky top-24">
+              <Card className="bg-gradient-to-br from-background to-background/50 border-cyan-500/20 sticky top-24">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Terminal className="h-5 w-5 text-orange-500" />
+                    <Terminal className="h-5 w-5 text-cyan-500" />
                     Examples
                   </CardTitle>
                 </CardHeader>
@@ -170,8 +170,8 @@ export function InteractiveDemo() {
                       variant={activeExample.id === example.id ? "default" : "ghost"}
                       className={`w-full justify-start text-left h-auto p-4 ${
                         activeExample.id === example.id
-                          ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white"
-                          : "hover:bg-orange-500/10"
+                          ? "bg-gradient-to-r from-cyan-500 to-cyan-600 text-white"
+                          : "hover:bg-cyan-500/10"
                       }`}
                       onClick={() => {
                         setActiveExample(example)
@@ -210,18 +210,18 @@ export function InteractiveDemo() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <Card className="bg-gradient-to-br from-background to-orange-500/5 border-orange-500/20 text-center p-6">
-              <Code className="h-8 w-8 text-orange-500 mx-auto mb-3" />
+            <Card className="bg-gradient-to-br from-background to-cyan-500/5 border-cyan-500/20 text-center p-6">
+              <Code className="h-8 w-8 text-cyan-500 mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Live Execution</h3>
               <p className="text-sm text-muted-foreground">Run code safely in an isolated environment</p>
             </Card>
-            <Card className="bg-gradient-to-br from-background to-orange-500/5 border-orange-500/20 text-center p-6">
-              <Zap className="h-8 w-8 text-orange-500 mx-auto mb-3" />
+            <Card className="bg-gradient-to-br from-background to-cyan-500/5 border-cyan-500/20 text-center p-6">
+              <Zap className="h-8 w-8 text-cyan-500 mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Instant Results</h3>
               <p className="text-sm text-muted-foreground">See output immediately with real-time feedback</p>
             </Card>
-            <Card className="bg-gradient-to-br from-background to-orange-500/5 border-orange-500/20 text-center p-6">
-              <Terminal className="h-8 w-8 text-orange-500 mx-auto mb-3" />
+            <Card className="bg-gradient-to-br from-background to-cyan-500/5 border-cyan-500/20 text-center p-6">
+              <Terminal className="h-8 w-8 text-cyan-500 mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Interactive Learning</h3>
               <p className="text-sm text-muted-foreground">Modify code and experiment with different approaches</p>
             </Card>

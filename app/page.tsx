@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Code, Rocket, Zap, Palette, Database, Cloud, Shield, Globe, Smartphone } from "lucide-react"
+import { ArrowRight, Code, Rocket, Zap, Palette, Database, Smartphone } from "lucide-react"
 import { useTypingAnimation } from "@/hooks/use-typing-animation"
 import { useScrollAnimation, useStaggeredScrollAnimation } from "@/hooks/use-scroll-animation"
 import { LanguageProficiency } from "@/components/language-proficiency"
@@ -62,17 +62,17 @@ export default function HomePage() {
           heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-600/10" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.1),transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-cyan-600/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_70%)]" />
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-600 bg-clip-text text-transparent">
               Abhishek Kumar
             </h1>
             <div className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 h-8 flex items-center justify-center">
               <span className="mr-2">I'm a</span>
-              <span className="text-orange-500 font-semibold min-w-[180px] sm:min-w-[200px] text-left">
+              <span className="text-cyan-500 font-semibold min-w-[180px] sm:min-w-[200px] text-left">
                 {typingText}
                 <span className="animate-pulse">|</span>
               </span>
@@ -86,7 +86,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 touch-manipulation"
               >
                 <Link href="/projects">
                   View Projects <ArrowRight className="ml-2 h-4 w-4" />
@@ -96,7 +96,7 @@ export default function HomePage() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-orange-500/50 hover:bg-orange-500/10 transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                className="border-cyan-500/50 hover:bg-cyan-500/10 transform hover:scale-105 transition-all duration-300 touch-manipulation"
               >
                 <Link href="/contact">Get In Touch</Link>
               </Button>
@@ -105,17 +105,17 @@ export default function HomePage() {
         </div>
 
         {/* Enhanced Floating Elements */}
-        <div className="absolute top-20 left-10 w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-full blur-xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-orange-400/20 to-orange-500/20 rounded-full blur-xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/4 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-orange-300/15 to-orange-500/15 rounded-full blur-lg animate-pulse delay-500" />
-        <div className="absolute bottom-1/3 right-1/4 w-20 sm:w-24 h-20 sm:h-24 bg-gradient-to-br from-orange-600/15 to-orange-400/15 rounded-full blur-lg animate-pulse delay-1500" />
+        <div className="absolute top-20 left-10 w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-full blur-xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-cyan-400/20 to-cyan-500/20 rounded-full blur-xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/4 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-cyan-300/15 to-cyan-500/15 rounded-full blur-lg animate-pulse delay-500" />
+        <div className="absolute bottom-1/3 right-1/4 w-20 sm:w-24 h-20 sm:h-24 bg-gradient-to-br from-cyan-600/15 to-cyan-400/15 rounded-full blur-lg animate-pulse delay-1500" />
       </section>
 
       {/* Enhanced Skills Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent">
               What I Do
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -127,7 +127,7 @@ export default function HomePage() {
             {skills.map((skill, index) => (
               <Card
                 key={skill.title}
-                className={`group bg-gradient-to-br from-background to-background/50 border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 touch-manipulation ${
+                className={`group bg-gradient-to-br from-background to-background/50 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 touch-manipulation ${
                   skillsAnimation.visibleItems[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{
@@ -136,12 +136,12 @@ export default function HomePage() {
                 }}
               >
                 <CardContent className="p-4 sm:p-6 text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative z-10">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <skill.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-orange-500 transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-cyan-500 transition-colors duration-300">
                       {skill.title}
                     </h3>
                     <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground transition-colors duration-300">

@@ -473,59 +473,74 @@ export function CodeExecutor({ language, initialCode, title, description, color 
 
   return (
     <Card
-      className={`bg-gradient-to-br from-background to-background/50 border-orange-500/20 ${isExpanded ? "fixed inset-4 z-50" : ""}`}
+      className={`bg-gradient-to-br from-background to-background/50 border-cyan-500/20 ${
+        isExpanded ? "fixed inset-2 sm:inset-4 z-50 max-h-screen overflow-hidden" : ""
+      }`}
     >
-      <CardHeader className="border-b border-orange-500/20">
-        <div className="flex items-center justify-between">
-          <div>
-            <CardTitle className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: color }} />
-              {title}
-              <Badge variant="secondary" className="bg-orange-500/10 text-orange-500">
+      <CardHeader className="border-b border-cyan-500/20 p-3 sm:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="min-w-0 flex-1">
+            <CardTitle className="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+              <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+              <span className="truncate">{title}</span>
+              <Badge variant="secondary" className="bg-cyan-500/10 text-cyan-500 text-xs">
                 {currentLanguageConfig ? currentLanguageConfig.name : language}
               </Badge>
               {language.toLowerCase() === "javascript" ? (
-                <Badge variant="outline" className="text-green-500 border-green-500/50">
+                <Badge variant="outline" className="text-green-500 border-green-500/50 text-xs">
                   Local
                 </Badge>
               ) : isOnline ? (
-                <Badge variant="outline" className="text-blue-500 border-blue-500/50">
+                <Badge variant="outline" className="text-blue-500 border-blue-500/50 text-xs hidden sm:inline-flex">
                   <Wifi className="h-3 w-3 mr-1" />
                   Judge0 API
                 </Badge>
               ) : (
-                <Badge variant="outline" className="text-yellow-500 border-yellow-500/50">
+                <Badge variant="outline" className="text-yellow-500 border-yellow-500/50 text-xs hidden sm:inline-flex">
                   <WifiOff className="h-3 w-3 mr-1" />
                   Offline
                 </Badge>
               )}
             </CardTitle>
-            <p className="text-sm text-muted-foreground mt-1">{description}</p>
+            <p className="text-xs sm:text-sm text-muted-foreground mt-1 line-clamp-2">{description}</p>
           </div>
-          <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={copyCode} className="border-orange-500/50">
-              {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+          <div className="flex gap-2 flex-shrink-0">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={copyCode}
+              className="border-cyan-500/50 h-8 w-8 p-0 sm:w-auto sm:px-3"
+            >
+              {copied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
+              <span className="hidden sm:inline ml-2">Copy</span>
             </Button>
-            <Button variant="outline" size="sm" onClick={resetCode} className="border-orange-500/50">
-              <RotateCcw className="h-4 w-4" />
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={resetCode}
+              className="border-cyan-500/50 h-8 w-8 p-0 sm:w-auto sm:px-3"
+            >
+              <RotateCcw className="h-3 w-3" />
+              <span className="hidden sm:inline ml-2">Reset</span>
             </Button>
             <Button
               variant="outline"
               size="sm"
               onClick={() => setIsExpanded(!isExpanded)}
-              className="border-orange-500/50"
+              className="border-cyan-500/50 h-8 w-8 p-0 sm:w-auto sm:px-3"
             >
-              {isExpanded ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+              {isExpanded ? <Minimize2 className="h-3 w-3" /> : <Maximize2 className="h-3 w-3" />}
+              <span className="hidden sm:inline ml-2">{isExpanded ? "Minimize" : "Expand"}</span>
             </Button>
             {isRunning ? (
-              <Button onClick={stopExecution} variant="destructive" size="sm">
-                <Square className="h-4 w-4 mr-2" />
-                Stop
+              <Button onClick={stopExecution} variant="destructive" size="sm" className="h-8">
+                <Square className="h-3 w-3 mr-1" />
+                <span className="hidden sm:inline">Stop</span>
               </Button>
             ) : (
-              <Button onClick={executeCode} className="bg-gradient-to-r from-orange-500 to-orange-600" size="sm">
-                <Play className="h-4 w-4 mr-2" />
-                Run
+              <Button onClick={executeCode} className="bg-gradient-to-r from-cyan-500 to-cyan-600 h-8" size="sm">
+                <Play className="h-3 w-3 mr-1" />
+                <span className="hidden sm:inline">Run</span>
               </Button>
             )}
           </div>
@@ -533,10 +548,16 @@ export function CodeExecutor({ language, initialCode, title, description, color 
 
         {/* Execution Stats */}
         {(executionStats.time || executionStats.memory || executionStats.status) && (
-          <div className="flex gap-4 text-xs text-muted-foreground mt-2">
+          <div className="flex flex-wrap gap-2 sm:gap-4 text-xs text-muted-foreground mt-2">
             {executionStats.status && (
               <span
-                className={`${executionStats.status === "Completed" ? "text-green-500" : executionStats.status === "Error" ? "text-red-500" : "text-yellow-500"}`}
+                className={`${
+                  executionStats.status === "Completed"
+                    ? "text-green-500"
+                    : executionStats.status === "Error"
+                      ? "text-red-500"
+                      : "text-yellow-500"
+                }`}
               >
                 📊 Status: {executionStats.status}
               </span>
@@ -566,28 +587,28 @@ export function CodeExecutor({ language, initialCode, title, description, color 
       </CardHeader>
 
       <CardContent className="p-0">
-        <div
-          className={`grid ${isExpanded ? "grid-rows-2" : "grid-cols-1 lg:grid-cols-2"} ${isExpanded ? "h-full" : ""}`}
-        >
+        <div className={`${isExpanded ? "flex flex-col h-[calc(100vh-200px)]" : "grid grid-cols-1 lg:grid-cols-2"}`}>
           {/* Code Editor */}
-          <div className="relative">
-            <div className="bg-slate-900 text-slate-100 p-4">
+          <div className={`relative ${isExpanded ? "flex-1 min-h-0" : ""}`}>
+            <div className="bg-slate-900 text-slate-100 p-3 sm:p-4 h-full flex flex-col">
               <div className="flex items-center gap-2 mb-3 text-xs text-slate-400">
                 <div className="flex gap-1">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <span>Live Code Editor</span>
+                <span className="hidden sm:inline">Live Code Editor</span>
                 <div className="ml-auto flex items-center gap-1">
                   <div className={`w-2 h-2 rounded-full ${isOnline ? "bg-green-400" : "bg-yellow-400"}`}></div>
-                  <span>{isOnline ? "Online" : "Offline"}</span>
+                  <span className="hidden sm:inline">{isOnline ? "Online" : "Offline"}</span>
                 </div>
               </div>
               <Textarea
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                className="bg-transparent border-none text-slate-100 font-mono text-sm resize-none focus:ring-0 focus:outline-none min-h-[300px]"
+                className={`bg-transparent border-none text-slate-100 font-mono text-xs sm:text-sm resize-none focus:ring-0 focus:outline-none flex-1 ${
+                  isExpanded ? "min-h-0" : "min-h-[200px] sm:min-h-[300px]"
+                }`}
                 placeholder="Write your code here..."
                 style={{ fontFamily: "Consolas, Monaco, 'Courier New', monospace" }}
               />
@@ -595,26 +616,32 @@ export function CodeExecutor({ language, initialCode, title, description, color 
           </div>
 
           {/* Output Console */}
-          <div className="border-t lg:border-t-0 lg:border-l border-orange-500/20">
-            <div className="bg-slate-800 text-green-400 p-4">
+          <div
+            className={`border-t lg:border-t-0 lg:border-l border-cyan-500/20 ${isExpanded ? "flex-1 min-h-0" : ""}`}
+          >
+            <div className="bg-slate-800 text-green-400 p-3 sm:p-4 h-full flex flex-col">
               <div className="flex items-center gap-2 mb-3 text-xs text-slate-400">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span>Console Output</span>
+                <span className="hidden sm:inline">Console Output</span>
                 {language.toLowerCase() === "javascript" && (
-                  <Badge variant="outline" className="text-green-400 border-green-400/50 text-xs">
+                  <Badge variant="outline" className="text-green-400 border-green-400/50 text-xs hidden sm:inline-flex">
                     Real Execution
                   </Badge>
                 )}
                 {currentLanguageConfig && language.toLowerCase() !== "javascript" && isOnline && (
-                  <Badge variant="outline" className="text-blue-400 border-blue-400/50 text-xs">
+                  <Badge variant="outline" className="text-blue-400 border-blue-400/50 text-xs hidden sm:inline-flex">
                     Judge0 API
                   </Badge>
                 )}
               </div>
-              <div className="font-mono text-sm min-h-[300px] whitespace-pre-wrap">
+              <div
+                className={`font-mono text-xs sm:text-sm whitespace-pre-wrap overflow-auto flex-1 ${
+                  isExpanded ? "min-h-0" : "min-h-[200px] sm:min-h-[300px]"
+                }`}
+              >
                 {isRunning ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-green-400/30 border-t-green-400 rounded-full animate-spin"></div>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-green-400/30 border-t-green-400 rounded-full animate-spin"></div>
                     Executing code...
                   </div>
                 ) : output ? (

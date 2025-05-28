@@ -37,7 +37,7 @@ export function Navigation() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-orange-500/20 shadow-lg shadow-orange-500/5"
+          ? "bg-background/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-lg shadow-cyan-500/5"
           : "bg-transparent"
       }`}
     >
@@ -45,10 +45,10 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-orange-500/25">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
               <Code className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-cyan-500 to-cyan-600 bg-clip-text text-transparent">
               Portfolio
             </span>
           </Link>
@@ -63,8 +63,8 @@ export function Navigation() {
                   href={item.href}
                   className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-2 group ${
                     isActive
-                      ? "text-orange-500 bg-orange-500/10"
-                      : "text-muted-foreground hover:text-orange-500 hover:bg-orange-500/5"
+                      ? "text-cyan-500 bg-cyan-500/10"
+                      : "text-muted-foreground hover:text-cyan-500 hover:bg-cyan-500/5"
                   }`}
                 >
                   <item.icon
@@ -74,7 +74,7 @@ export function Navigation() {
                   />
                   {item.label}
                   {isActive && (
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-orange-500 rounded-full" />
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-cyan-500 rounded-full" />
                   )}
                 </Link>
               )
@@ -88,18 +88,18 @@ export function Navigation() {
                 variant="outline"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="border-orange-500/50 hover:bg-orange-500/10 hover:border-orange-500 transition-all duration-300"
+                className="border-cyan-500/50 hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-300"
               >
                 {theme === "dark" ? (
-                  <Sun className="h-5 w-5 text-orange-500" />
+                  <Sun className="h-5 w-5 text-cyan-500" />
                 ) : (
-                  <Moon className="h-5 w-5 text-orange-500" />
+                  <Moon className="h-5 w-5 text-cyan-500" />
                 )}
               </Button>
             )}
             <Button
               asChild
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300"
             >
               <Link href="/contact">Get In Touch</Link>
             </Button>
@@ -112,12 +112,12 @@ export function Navigation() {
                 variant="outline"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="border-orange-500/50 hover:bg-orange-500/10"
+                className="border-cyan-500/50 hover:bg-cyan-500/10"
               >
                 {theme === "dark" ? (
-                  <Sun className="h-5 w-5 text-orange-500" />
+                  <Sun className="h-5 w-5 text-cyan-500" />
                 ) : (
-                  <Moon className="h-5 w-5 text-orange-500" />
+                  <Moon className="h-5 w-5 text-cyan-500" />
                 )}
               </Button>
             )}
@@ -125,9 +125,9 @@ export function Navigation() {
               variant="outline"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="border-orange-500/50 hover:bg-orange-500/10"
+              className="border-cyan-500/50 hover:bg-cyan-500/10"
             >
-              {isOpen ? <X className="h-5 w-5 text-orange-500" /> : <Menu className="h-5 w-5 text-orange-500" />}
+              {isOpen ? <X className="h-5 w-5 text-cyan-500" /> : <Menu className="h-5 w-5 text-cyan-500" />}
             </Button>
           </div>
         </div>
@@ -138,7 +138,7 @@ export function Navigation() {
             isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4 space-y-2 border-t border-orange-500/20 bg-background/95 backdrop-blur-xl rounded-b-xl">
+          <div className="py-4 space-y-2 border-t border-cyan-500/20 bg-background/95 backdrop-blur-xl rounded-b-xl">
             {navItems.map((item) => {
               const isActive = pathname === item.href
               return (
@@ -147,8 +147,8 @@ export function Navigation() {
                   href={item.href}
                   className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
                     isActive
-                      ? "text-orange-500 bg-orange-500/10"
-                      : "text-muted-foreground hover:text-orange-500 hover:bg-orange-500/5"
+                      ? "text-cyan-500 bg-cyan-500/10"
+                      : "text-muted-foreground hover:text-cyan-500 hover:bg-cyan-500/5"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -160,7 +160,7 @@ export function Navigation() {
             <div className="px-4 pt-4">
               <Button
                 asChild
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
+                className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white"
                 onClick={() => setIsOpen(false)}
               >
                 <Link href="/contact">Get In Touch</Link>

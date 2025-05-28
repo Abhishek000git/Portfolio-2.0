@@ -14,15 +14,14 @@ const experiences = [
     description:
       "Serving as Senior Executive Member in Blockchain Team at KodeinKGP, leading the design and implementation of decentralized applications and blockchain-based solutions.",
     technologies: ["Ethereum", "Solidity", "Next.js", "Hardhat", "Web3.js", "MetaMask", "IPFS"],
-    achievements: [
-      "Not yet",
-    ],
+    achievements: ["Not yet"],
     metrics: {
       teamSize: "30+ developers",
       impact: "",
       improvement: "",
     },
-    image: "https://kodeinkgp.in/static/media/kik-final-logo.bc34184b7fe2143f59bc.png?height=400&width=600&text=TechCorp+Solutions+HQ",
+    image:
+      "https://kodeinkgp.in/static/media/kik-final-logo.bc34184b7fe2143f59bc.png?height=400&width=600&text=TechCorp+Solutions+HQ",
   },
   {
     id: 2,
@@ -44,7 +43,8 @@ const experiences = [
       impact: "",
       improvement: "",
     },
-    image: "https://kodeinkgp.in/static/media/kik-final-logo.bc34184b7fe2143f59bc.png?height=400&width=600&text=InnovateLab+Office",
+    image:
+      "https://kodeinkgp.in/static/media/kik-final-logo.bc34184b7fe2143f59bc.png?height=400&width=600&text=InnovateLab+Office",
   },
 ]
 
@@ -52,17 +52,17 @@ export default function ExperiencePage() {
   return (
     <div className="pt-16 min-h-screen relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-orange-600/5" />
-      <div className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 left-10 w-40 h-40 bg-gradient-to-br from-orange-400/10 to-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-cyan-600/5" />
+      <div className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 left-10 w-40 h-40 bg-gradient-to-br from-cyan-400/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
 
       <div className="container mx-auto px-4 py-12 relative z-10">
         {/* Enhanced Header */}
         <div className="text-center mb-20">
-          <div className="inline-block p-4 bg-gradient-to-r from-orange-500/10 to-orange-600/10 rounded-full mb-6">
-            <TrendingUp className="h-12 w-12 text-orange-500" />
+          <div className="inline-block p-4 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 rounded-full mb-6">
+            <TrendingUp className="h-12 w-12 text-cyan-500" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-600 bg-clip-text text-transparent">
             Professional Journey
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -75,7 +75,7 @@ export default function ExperiencePage() {
         <div className="max-w-7xl mx-auto">
           <div className="relative">
             {/* Enhanced Timeline Line */}
-            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 via-orange-400 to-orange-600 rounded-full shadow-lg shadow-orange-500/20"></div>
+            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-500 via-cyan-400 to-cyan-600 rounded-full shadow-lg shadow-cyan-500/20"></div>
 
             {experiences.map((experience, index) => (
               <div
@@ -84,7 +84,7 @@ export default function ExperiencePage() {
               >
                 {/* Enhanced Timeline Dot */}
                 <div
-                  className="absolute left-6 md:left-auto md:right-auto w-6 h-6 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full border-4 border-background shadow-xl shadow-orange-500/30 group-hover:scale-125 transition-all duration-500 z-10"
+                  className="absolute left-6 md:left-auto md:right-auto w-6 h-6 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full border-4 border-background shadow-xl shadow-cyan-500/30 group-hover:scale-125 transition-all duration-500 z-10"
                   style={{
                     [index % 2 === 0 ? "right" : "left"]: index % 2 === 0 ? "-3rem" : "-3rem",
                     top: "2rem",
@@ -96,8 +96,8 @@ export default function ExperiencePage() {
                 {/* Enhanced Timeline Connector */}
                 <div
                   className={`hidden md:block absolute top-8 w-8 h-0.5 bg-gradient-to-r ${
-                    index % 2 === 0 ? "from-orange-500 to-transparent right-0" : "from-transparent to-orange-500 left-0"
-                  } group-hover:shadow-lg group-hover:shadow-orange-500/30 transition-all duration-500`}
+                    index % 2 === 0 ? "from-cyan-500 to-transparent right-0" : "from-transparent to-cyan-500 left-0"
+                  } group-hover:shadow-lg group-hover:shadow-cyan-500/30 transition-all duration-500`}
                   style={{
                     [index % 2 === 0 ? "right" : "left"]: "-2rem",
                   }}
@@ -109,7 +109,7 @@ export default function ExperiencePage() {
                     index % 2 === 0 ? "right-full mr-16" : "left-full ml-16"
                   } group-hover:scale-105 transition-all duration-500`}
                 >
-                  <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl shadow-orange-500/20 border border-orange-500/20">
+                  <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl shadow-cyan-500/20 border border-cyan-500/20">
                     <Image
                       src={experience.image || "/placeholder.svg"}
                       alt={`${experience.company} office`}
@@ -122,15 +122,15 @@ export default function ExperiencePage() {
                       <p className="text-white/80 text-sm">{experience.location}</p>
                     </div>
                     {/* Decorative overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                 </div>
 
-                <Card className="ml-16 md:ml-0 bg-gradient-to-br from-background via-background/95 to-orange-500/5 border-orange-500/20 hover:border-orange-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 group-hover:translate-y-[-4px]">
+                <Card className="ml-16 md:ml-0 bg-gradient-to-br from-background via-background/95 to-cyan-500/5 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 group-hover:translate-y-[-4px]">
                   <CardContent className="p-8">
                     {/* Mobile Image - Show above content on mobile */}
                     <div className="md:hidden mb-6">
-                      <div className="relative w-full h-48 rounded-lg overflow-hidden shadow-lg border border-orange-500/20">
+                      <div className="relative w-full h-48 rounded-lg overflow-hidden shadow-lg border border-cyan-500/20">
                         <Image
                           src={experience.image || "/placeholder.svg"}
                           alt={`${experience.company} office`}
@@ -149,14 +149,14 @@ export default function ExperiencePage() {
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-2xl font-bold group-hover:text-orange-500 transition-colors duration-300">
+                          <h3 className="text-2xl font-bold group-hover:text-cyan-500 transition-colors duration-300">
                             {experience.title}
                           </h3>
-                          <Badge variant="secondary" className="bg-orange-500/10 text-orange-500 border-orange-500/20">
+                          <Badge variant="secondary" className="bg-cyan-500/10 text-cyan-500 border-cyan-500/20">
                             {experience.duration}
                           </Badge>
                         </div>
-                        <div className="flex items-center gap-2 text-orange-500 mb-3">
+                        <div className="flex items-center gap-2 text-cyan-500 mb-3">
                           <Building className="h-5 w-5" />
                           <span className="font-semibold text-lg">{experience.company}</span>
                         </div>
@@ -175,18 +175,18 @@ export default function ExperiencePage() {
 
                     {/* Metrics Cards */}
                     <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="text-center p-3 bg-gradient-to-br from-orange-500/5 to-orange-600/5 rounded-lg border border-orange-500/10">
-                        <Users className="h-5 w-5 text-orange-500 mx-auto mb-1" />
+                      <div className="text-center p-3 bg-gradient-to-br from-cyan-500/5 to-cyan-600/5 rounded-lg border border-cyan-500/10">
+                        <Users className="h-5 w-5 text-cyan-500 mx-auto mb-1" />
                         <p className="text-xs text-muted-foreground">Team Size</p>
                         <p className="font-semibold text-sm">{experience.metrics.teamSize}</p>
                       </div>
-                      <div className="text-center p-3 bg-gradient-to-br from-orange-500/5 to-orange-600/5 rounded-lg border border-orange-500/10">
-                        <TrendingUp className="h-5 w-5 text-orange-500 mx-auto mb-1" />
+                      <div className="text-center p-3 bg-gradient-to-br from-cyan-500/5 to-cyan-600/5 rounded-lg border border-cyan-500/10">
+                        <TrendingUp className="h-5 w-5 text-cyan-500 mx-auto mb-1" />
                         <p className="text-xs text-muted-foreground">Impact</p>
                         <p className="font-semibold text-sm">{experience.metrics.impact}</p>
                       </div>
-                      <div className="text-center p-3 bg-gradient-to-br from-orange-500/5 to-orange-600/5 rounded-lg border border-orange-500/10">
-                        <Award className="h-5 w-5 text-orange-500 mx-auto mb-1" />
+                      <div className="text-center p-3 bg-gradient-to-br from-cyan-500/5 to-cyan-600/5 rounded-lg border border-cyan-500/10">
+                        <Award className="h-5 w-5 text-cyan-500 mx-auto mb-1" />
                         <p className="text-xs text-muted-foreground">Key Result</p>
                         <p className="font-semibold text-sm">{experience.metrics.improvement}</p>
                       </div>
@@ -196,13 +196,13 @@ export default function ExperiencePage() {
 
                     <div className="mb-6">
                       <h4 className="font-semibold mb-3 text-lg flex items-center gap-2">
-                        <Award className="h-5 w-5 text-orange-500" />
+                        <Award className="h-5 w-5 text-cyan-500" />
                         Key Achievements
                       </h4>
                       <ul className="space-y-2">
                         {experience.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
-                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
                             <span className="group-hover:text-foreground transition-colors duration-300">
                               {achievement}
                             </span>
@@ -218,7 +218,7 @@ export default function ExperiencePage() {
                           <Badge
                             key={tech}
                             variant="secondary"
-                            className="bg-orange-500/10 text-orange-500 border-orange-500/20 hover:bg-orange-500/20 transition-colors duration-300"
+                            className="bg-cyan-500/10 text-cyan-500 border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-300"
                           >
                             {tech}
                           </Badge>
