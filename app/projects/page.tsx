@@ -48,16 +48,6 @@ const featuredProjects = [
 const allProjects = [
   ...featuredProjects,
   {
-    id: 4,
-    title: "Bussiness Consulting Website",
-    description:
-      "Designed and developed a professional, responsive website for a business consulting firm, showcasing services, case studies, and client testimonials to establish a strong online presence and drive client engagement.",
-    image: "/images/business-consulting-website.png?height=300&width=400",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "#",
-    demo: "https://tif-consulting.vercel.app/",
-  },
-  {
     id: 5,
     title: "Basic Console Tic-Tac-Toe",
     description:
